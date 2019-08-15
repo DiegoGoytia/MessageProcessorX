@@ -14,11 +14,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/user_creation_approval', function (req, res) {
-
   var user_id = req.body.requester;
-
   console.log(user_id);
-
   axios.post('https://hooks.slack.com/services/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', {
     "text" : "A new user approval is waiting for response. (test)"
   })
